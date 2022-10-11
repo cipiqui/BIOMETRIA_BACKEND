@@ -8,7 +8,7 @@ const cors = require('cors') // Importo el cors para el servidor
 // .....................................................................
 // .....................................................................
 function cargarLogica( fichero ) { // Metodo para cargar la logica
-  return new Promise( (resolver, rechazar) => {
+  return new Promise( (resolver, rechazar) => { // Creo una promesa para cargar la logica 
 
   var laLogica = new Logica( fichero,
 
