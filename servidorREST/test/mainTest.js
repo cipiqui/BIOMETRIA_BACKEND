@@ -28,8 +28,8 @@ describe("Test 1 : Recuerda arrancar el servidor", function () {
   // ....................................................
   it("probar POST /alta", function (hecho) { // Probar Post
     var datosMedicion = { // Datos de la medicion a enviar al servidor REST
-      ID: "19",
-      Medicion: 7.5, 
+      ID: "10",
+      Medicion: "25.4" ,
     };
     request.post(
       {
@@ -45,7 +45,7 @@ describe("Test 1 : Recuerda arrancar el servidor", function () {
         hecho(); // Indicar que el test ha terminado 
       } // callback
     ); // .post
-    console.log("llega?");
+    //console.log("llega?");
   })//it
 
 }); // describe

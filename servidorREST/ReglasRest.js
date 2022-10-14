@@ -15,18 +15,19 @@ module.exports.cargar = function (servidorExpress, laLogica) {
   servidorExpress.get("/medicion", async function (peticion, respuesta){
     console.log(" * GET / Medicion");
     var error = null
-    //Llamada a la funcion buscar_muestra() para recoger
+    //Llamada a la funcion buscarMedicion() para recoger
     //la muestra introducida en la DB
     try{
-
-      var res = await laLogica.buscarMedicion("2")
+      //Buscar la medicion del ultimo id
+    
+      var res = await laLogica.buscarMedicion("23")
     }
 
     catch (e){
       error = e
     }
 
-
+  /*
     if (error != null){
       if( res.length == 0 ) {
         // 404: not found
@@ -34,6 +35,8 @@ module.exports.cargar = function (servidorExpress, laLogica) {
         return
       }
     }
+
+    */
     console.log(res)
     respuesta.send( JSON.stringify( res ) )
 
@@ -53,7 +56,7 @@ module.exports.cargar = function (servidorExpress, laLogica) {
       await laLogica.insertarMedicion(datos);
       console.log("Termina el metodo");
       //done()
-      console.log("tiempo?");
+      //console.log("tiempo?");
     }
     catch (e){
       error = e
