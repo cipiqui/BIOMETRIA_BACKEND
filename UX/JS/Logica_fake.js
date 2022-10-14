@@ -32,7 +32,7 @@ export default class LogicaFake {
         }) 
         //Se recoge el JSON de la cabecera de la respuesta 
         .then(response => response.json())
-        //Una vez recogida se pasa la muestra y la fecha de esta a la funcion cargar_muestra()
+        //Una vez recogida se pasa la muestra
         .then(datos_medicion =>
             this.cargarMedicion(datos_medicion[0].Medicion))
             //)
@@ -79,7 +79,7 @@ export default class LogicaFake {
 
         var metodo = this
         var muestra_txt = document.getElementById("valorMuestraTxt");
-		muestra_txt.textContent = "Valor de la Medicion: " + muestra;
+		muestra_txt.textContent = "Valor de la muestra: " + muestra;
 
 	}
 }
