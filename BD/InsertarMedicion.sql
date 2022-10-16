@@ -1,5 +1,4 @@
 
 -- InsertarMedicion.sql
 
-INSERT into medicion values (1, 45.6);
-INSERT into medicion values (2, 42.6);
+INSERT into medicion values (NULL, "1", "123");

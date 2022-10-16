@@ -23,11 +23,7 @@
                     boton_buscar_muestra.addEventListener("click" , async function(){
                         var res = await logica.buscarMedicion()
                     })
-                    //Asignando la funcionladidad al boton de insertar muestra 
-                    let boton_intoducir_muestra = document.getElementById("boton_introducir_muestra")
-                    boton_intoducir_muestra.addEventListener("click" , async function(){
-                        var res = logica.insertarMedicion()
-                    }) 
+ 
                 }
             }
         </script>
@@ -48,23 +44,6 @@
         <div class="  justify-content-around" style="margin-top: 2%;">
             <a id="boton_buscar_muestra" class="btn btn-primary">
               Recoger muestra
-            </a>
-        </div>
-
-        <br>
-        <div >
-            Valor del ID:
-            <input  id="valorIDInput"> </input>
-        </div>
-        <br>
-        <div >
-            Medicion:
-            <input  id="MedicionValorInput"> </input>
-        </div>
-
-        <div class="  justify-content-around" style="margin-top: 2%;">
-            <a id="boton_introducir_muestra" class="btn btn-primary">
-              Introducir muestra
             </a>
         </div>
 

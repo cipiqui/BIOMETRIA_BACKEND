@@ -24,16 +24,16 @@ describe("Test 1: Conectar, añadir, comprobar y cerrar", function () { // Test 
     }) // it
     // ....................................................
     // ....................................................
-    it("puedo insertar una medicion", // Puedo insertar una NUEVA medicion en la base de datos
-        async function () { // Función asíncrona para insertar valores y comprobar que se han insertado con callback
-            await laLogica.insertarMedicion( // Inserta una medicion llamando a la función insertarMedicion de la clase Logica (a la promesa)
-                {
-                    ID: "7", Medicion: 5 // Valores de la medicion
-                })
-            var res = await laLogica.buscarMedicion("7") // Busca la medicion con el ID 5
-            assert.equal(res[0].ID, "7", "¿no es 7?") // Comprueba que el ID debe ser 5
-            
-        }) // it
+    it( "puedo insertar una muestra",
+    async function() {
+        await laLogica.insertarMedicion(
+            {MedicionMajor: "1232", MedicionMinor: '233'}
+        )
+        var res = await laLogica.buscarMedicion( "1232" )
+        assert.equal( res.length, 1, "¿no hay un resulado?" )
+        assert.equal( res[0].MedicionMajor, "1232", "¿no es 1232?" )
+        assert.equal( res[0].MedicionMinor, '233', "¿no es 233?" )
+    }) // it
     // ....................................................
     // ....................................................
     it("cerrar conexión a la base de datos", // Cierra la conexión a la base de datos 

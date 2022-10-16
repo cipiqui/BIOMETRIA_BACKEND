@@ -1,10 +1,12 @@
 
 -- create table Medicion
 
+DROP TABLE Medicion;
+
 create table Medicion (
 
-ID char (3) not null,
-Medicion float (5) not null,
-primary key (ID)
+ID INTEGER PRIMARY KEY,
+MedicionMajor char (5) not null,
+MedicionMinor char (5) not null
 
 );
